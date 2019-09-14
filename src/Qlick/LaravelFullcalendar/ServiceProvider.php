@@ -1,4 +1,6 @@
-<?php namespace MaddHatter\LaravelFullcalendar;
+<?php 
+
+namespace Qlick\LaravelFullcalendar;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
@@ -12,8 +14,8 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->app->bind('laravel-fullcalendar', function ($app) {
-            return $app->make('MaddHatter\LaravelFullcalendar\Calendar');
+        $this->app->bind('laravel-full-calendar', function ($app) {
+            return $app->make('Qlick\LaravelFullcalendar\Calendar');
         });
     }
 
@@ -29,7 +31,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function provides()
     {
-        return ['laravel-fullcalendar'];
+        return ['laravel-full-calendar'];
     }
 
 }

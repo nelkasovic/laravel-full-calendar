@@ -1,4 +1,4 @@
-<?php namespace MaddHatter\LaravelFullcalendar;
+<?php namespace Qlick\LaravelFullcalendar;
 
 use DateTime;
 
