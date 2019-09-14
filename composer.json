@@ -24,9 +24,9 @@
         "docs": "https://github.com/nelkasovic/laravel-full-calendar"
     },
     "autoload": {
-        "App\\": "app/",
         "psr-4": {
-            "Qlick\\LaravelFullcalendar": "src/"
+            "App\\": "app/",
+            "Qlick\\LaravelFullcalendar\\": "src/"
         }
     },
     "extra": {
