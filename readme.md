@@ -1,6 +1,6 @@
 # Laravel 6 Full Calendar Helper
 
-This is a simple helper package to make generating [http://fullcalendar.io](http://fullcalendar.io) in Laravel apps easier.
+This is a fork of https://github.com/nelkasovic/laravel-full-calendar. A simple helper package to make generating [http://fullcalendar.io](http://fullcalendar.io) in Laravel apps easier. Because the package is abandoned I decided to fork and publish a version which should work with Laravel 6.
 
 ## Installing
 Require the package with composer using the following command:
