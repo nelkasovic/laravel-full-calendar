@@ -14,21 +14,22 @@ class FullCalendarServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        /*$this->app->bind('laravel-full-calendar', function ($app) {
+        $this->app->bind('laravel-full-calendar', function ($app) {
             return $app->make('LaravelFullCalendar\Calendar');
-        });*/
-
+        });
+/*
         $this->app->singleton('laravel-full-calendar', function ($app) {
             return new Calendar($app['request']->server());
         });
 
         $this->app->alias('laravel-full-calendar', Calendar::class);
+        */
 
     }
 
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../views/', 'fullcalendar');
+        $this->loadViewsFrom(__DIR__, 'fullcalendar');
     }
 
     /**
@@ -38,7 +39,7 @@ class FullCalendarServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        //return ['laravel-full-calendar'];
-        return ['laravel-full-calendar', Calendar::class];
+        return ['laravel-full-calendar'];
+        //return ['laravel-full-calendar', Calendar::class];
     }
 }
