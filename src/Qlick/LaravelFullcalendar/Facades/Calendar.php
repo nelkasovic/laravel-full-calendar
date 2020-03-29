@@ -1,6 +1,4 @@
-<?php 
-
-namespace Qlick\LaravelFullcalendar\Facades;
+<?php
 
 use Illuminate\Support\Facades\Facade;
 

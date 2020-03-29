@@ -1,6 +1,4 @@
-<?php 
-
-namespace Qlick\LaravelFullcalendar;
+<?php
 
 use Illuminate\Support\Collection;
 

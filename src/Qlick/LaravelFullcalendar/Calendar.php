@@ -1,6 +1,4 @@
-<?php 
-
-namespace Qlick\LaravelFullcalendar;
+<?php
 
 use ArrayAccess;
 use DateTime;
@@ -124,7 +122,7 @@ class Calendar
      */
     public function getId()
     {
-        if ( ! empty($this->id)) {
+        if (!empty($this->id)) {
             return $this->id;
         }
 
@@ -232,7 +230,6 @@ class Calendar
         }
 
         return $json;
-
     }
 
     /**
@@ -271,5 +268,4 @@ class Calendar
 
         return str_replace($search, $replace, $json);
     }
-
 }

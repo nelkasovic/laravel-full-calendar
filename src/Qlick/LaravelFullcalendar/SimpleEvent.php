@@ -1,4 +1,4 @@
-<?php namespace Qlick\LaravelFullcalendar;
+<?php
 
 use DateTime;
 

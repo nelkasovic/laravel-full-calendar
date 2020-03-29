@@ -13,7 +13,7 @@
         "php": "^7.1",
         "illuminate/database": "^5.0|^6.0|^7.0",
         "illuminate/support": "^5.0|^6.0|^7.0",
-        "laravel/helpers": "^1.0",
+        "laravel/helpers": "^1.0"
     },
     "license": "MIT",
     "homepage": "https://github.com/nelkasovic/laravel-full-calendar",

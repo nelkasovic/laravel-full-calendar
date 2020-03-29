@@ -1,4 +1,4 @@
-<?php namespace Qlick\LaravelFullcalendar;
+<?php
 
 use DateTime;
 
@@ -31,5 +31,4 @@ interface Event
      * @return DateTime
      */
     public function getEnd();
-
 }
