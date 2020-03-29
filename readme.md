@@ -20,13 +20,13 @@ Or add the following to your composer.json's require section and `composer updat
 Register the service provider in your `app.php` config file:
 
 ```php
-Qlick\LaravelFullcalendar\ServiceProvider::class,
+LaravelFullCalendar\ServiceProvider::class,
 ```
 
 And optionally create an alias:
 
 ```php
-'Calendar' => Qlick\LaravelFullcalendar\Facades\Calendar::class,
+'Calendar' => LaravelFullCalendar\Facades\Calendar::class,
 
 ```
 
@@ -57,10 +57,10 @@ $event = \Calendar::event(
 ```
 #### Implementing `Event` Interface
 
-Alternatively, you can use an existing class and have it implement `Qlick\LaravelFullcalendar\Event`. An example of an Eloquent model that implements the `Event` interface:
+Alternatively, you can use an existing class and have it implement `LaravelFullCalendar\Event`. An example of an Eloquent model that implements the `Event` interface:
 
 ```php
-class EventModel extends Eloquent implements \Qlick\LaravelFullcalendar\Event
+class EventModel extends Eloquent implements \LaravelFullCalendar\Event
 {
 
     protected $dates = ['start', 'end'];
@@ -118,10 +118,10 @@ class EventModel extends Eloquent implements \Qlick\LaravelFullcalendar\Event
 
 #### `IdentifiableEvent` Interface
 
-If you wish for your existing class to have event IDs, implement `\Qlick\LaravelFullcalendar\IdentifiableEvent` instead. This interface extends `\Qlick\LaravelFullcalendar\Event` to add a `getId()` method:
+If you wish for your existing class to have event IDs, implement `\LaravelFullcalendar\IdentifiableEvent` instead. This interface extends `\LaravelFullcalendar\Event` to add a `getId()` method:
 
 ```php
-class EventModel extends Eloquent implements \Qlick\LaravelFullcalendar\IdentifiableEvent
+class EventModel extends Eloquent implements \LaravelFullcalendar\IdentifiableEvent
 {
 
 	// Implement all Event methods ...
@@ -164,7 +164,7 @@ $event = \Calendar::event(
 
 ```php
 <?php
-class CalendarEvent extends \Illuminate\Database\Eloquent\Model implements \Qlick\LaravelFullcalendar\Event
+class CalendarEvent extends \Illuminate\Database\Eloquent\Model implements \LaravelFullcalendar\Event
 {
 	//...
 
@@ -210,7 +210,7 @@ $events[] = \Calendar::event(
 	'stringEventId' //optionally, you can specify an event ID
 );
 
-$eloquentEvent = EventModel::first(); //EventModel implements Qlick\LaravelFullcalendar\Event
+$eloquentEvent = EventModel::first(); //EventModel implements LaravelFullcalendar\Event
 
 $calendar = \Calendar::addEvents($events) //add an array with addEvents
     ->addEvent($eloquentEvent, [ //set custom color fo this event
