@@ -20,7 +20,7 @@ Or add the following to your composer.json's require section and `composer updat
 Register the service provider in your `app.php` config file:
 
 ```php
-LaravelFullCalendar\ServiceProvider::class,
+LaravelFullCalendar\FullCalendarServiceProvider::class,
 ```
 
 And optionally create an alias:
@@ -47,8 +47,8 @@ The simpliest way to create an event is to pass the event information to `Calend
 $event = \Calendar::event(
     "Valentine's Day", //event title
     true, //full day event?
-    '2015-02-14', //start time, must be a DateTime object or valid DateTime format (http://bit.ly/1z7QWbg)
-    '2015-02-14', //end time, must be a DateTime object or valid DateTime format (http://bit.ly/1z7QWbg),
+    '2020-02-14', //start time, must be a DateTime object or valid DateTime format (http://bit.ly/1z7QWbg)
+    '2020-02-14', //end time, must be a DateTime object or valid DateTime format (http://bit.ly/1z7QWbg),
 	1, //optional event ID
 	[
 		'url' => 'http://full-calendar.io'
@@ -149,8 +149,8 @@ Pass an array of `'parameter' => 'value'` pairs as the 6th parameter to `Calenda
 $event = \Calendar::event(
     "Valentine's Day", //event title
     true, //full day event?
-    '2015-02-14', //start time, must be a DateTime object or valid DateTime format (http://bit.ly/1z7QWbg)
-    '2015-02-14', //end time, must be a DateTime object or valid DateTime format (http://bit.ly/1z7QWbg),
+    '2020-02-14', //start time, must be a DateTime object or valid DateTime format (http://bit.ly/1z7QWbg)
+    '2020-02-14', //end time, must be a DateTime object or valid DateTime format (http://bit.ly/1z7QWbg),
 	1, //optional event ID
 	[
 		'url' => 'http://full-calendar.io',
@@ -197,16 +197,16 @@ $events = [];
 $events[] = \Calendar::event(
     'Event One', //event title
     false, //full day event?
-    '2015-02-11T0800', //start time (you can also use Carbon instead of DateTime)
-    '2015-02-12T0800', //end time (you can also use Carbon instead of DateTime)
+    '2020-02-11T0800', //start time (you can also use Carbon instead of DateTime)
+    '2020-02-12T0800', //end time (you can also use Carbon instead of DateTime)
 	0 //optionally, you can specify an event ID
 );
 
 $events[] = \Calendar::event(
     "Valentine's Day", //event title
     true, //full day event?
-    new \DateTime('2015-02-14'), //start time (you can also use Carbon instead of DateTime)
-    new \DateTime('2015-02-14'), //end time (you can also use Carbon instead of DateTime)
+    new \DateTime('2020-02-14'), //start time (you can also use Carbon instead of DateTime)
+    new \DateTime('2020-02-14'), //end time (you can also use Carbon instead of DateTime)
 	'stringEventId' //optionally, you can specify an event ID
 );
 
@@ -253,6 +253,6 @@ Then to display, add the following code to your View:
 
 The `script()` can be placed anywhere after `calendar()`, and must be after fullcalendar was included.
 
-This will generate (in February 2015):
+This will generate (in February 2020):
 
 ![](http://i.imgur.com/qjgVhCY.png)
