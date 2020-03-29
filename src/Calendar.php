@@ -129,7 +129,7 @@ class Calendar
             return $this->id;
         }
 
-        $this->id = Str::random(8)
+        $this->id = Str::random(8);
 
         return $this->id;
     }
