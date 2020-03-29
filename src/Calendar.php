@@ -5,6 +5,7 @@ namespace LaravelFullCalendar;
 use ArrayAccess;
 use DateTime;
 use Illuminate\View\Factory;
+use Illuminate\Support\Str;
 
 class Calendar
 {
@@ -128,7 +129,7 @@ class Calendar
             return $this->id;
         }
 
-        $this->id = str_random(8);
+        $this->id = Str::random(8)
 
         return $this->id;
     }
@@ -268,6 +269,7 @@ class Calendar
             $replace[] = $this->getCallbacks()[$name];
         }
 
-        return str_replace($search, $replace, $json);
+        //return str_replace($search, $replace, $json);
+        return Str::replaceArray($search, $replace, $json);
     }
 }

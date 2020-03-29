@@ -2,9 +2,9 @@
 
 namespace LaravelFullCalendar;
 
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends BaseServiceProvider
+class FullCalendarServiceProvider extends ServiceProvider
 {
 
     /**
@@ -14,9 +14,16 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->app->bind('laravel-full-calendar', function ($app) {
+        /*$this->app->bind('laravel-full-calendar', function ($app) {
             return $app->make('LaravelFullCalendar\Calendar');
+        });*/
+
+        $this->app->singleton('laravel-full-calendar', function ($app) {
+            return new Calendar($app['request']->server());
         });
+
+        $this->app->alias('laravel-full-calendar', Calendar::class);
+
     }
 
     public function boot()
@@ -31,6 +38,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function provides()
     {
-        return ['laravel-full-calendar'];
+        //return ['laravel-full-calendar'];
+        return ['laravel-full-calendar', Calendar::class];
     }
 }
