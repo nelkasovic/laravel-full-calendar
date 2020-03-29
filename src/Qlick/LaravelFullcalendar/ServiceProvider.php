@@ -1,5 +1,7 @@
 <?php
 
+namespace LaravelFullCalendar;
+
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
@@ -31,6 +33,4 @@ class ServiceProvider extends BaseServiceProvider
     {
         return ['laravel-full-calendar'];
     }
-
 }
-

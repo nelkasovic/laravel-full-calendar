@@ -27,16 +27,16 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Qlick\\LaravelFullcalendar\\": "src/"
+            "LaravelFullcalendar\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Qlick\\LaravelFullcalendar\\ServiceProvider"
+                "LaravelFullcalendar\\ServiceProvider"
             ],
             "aliases": {
-                "Calendar": "Qlick\\LaravelFullcalendar\\Facades\\Calendar"
+                "Calendar": "LaravelFullcalendar\\Facades\\Calendar"
             }
         }
     },

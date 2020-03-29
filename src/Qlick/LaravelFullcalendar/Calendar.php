@@ -1,5 +1,7 @@
 <?php
 
+namespace LaravelFullCalendar;
+
 use ArrayAccess;
 use DateTime;
 use Illuminate\View\Factory;

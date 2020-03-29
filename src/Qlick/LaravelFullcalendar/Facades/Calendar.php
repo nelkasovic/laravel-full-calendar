@@ -1,5 +1,7 @@
 <?php
 
+namespace LaravelFullCalendar\Facades\Calendar;
+
 use Illuminate\Support\Facades\Facade;
 
 class Calendar extends Facade

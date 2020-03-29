@@ -1,5 +1,7 @@
 <?php
 
+namespace LaravelFullCalendar;
+
 interface IdentifiableEvent extends Event
 {
 
