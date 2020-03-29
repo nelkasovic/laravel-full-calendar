@@ -15,7 +15,7 @@ class ServiceProvider extends BaseServiceProvider
     public function register()
     {
         $this->app->bind('laravel-full-calendar', function ($app) {
-            return $app->make('Qlick\LaravelFullcalendar\Calendar');
+            return $app->make('LaravelFullCalendar\Calendar');
         });
     }
 
