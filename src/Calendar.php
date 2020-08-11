@@ -265,6 +265,6 @@ class Calendar
 		    $json = Str::replaceArray($placeholder, [$this->getCallbacks()[$name]], $json);
 	    }
 
-        //return str_replace($search, $replace, $json);
+        return $json;
     }
 }
