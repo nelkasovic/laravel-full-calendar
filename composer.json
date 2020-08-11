@@ -1,14 +1,6 @@
 {
-    "name": "qlick/laravel-full-calendar",
-    "description": "Laravel helper for FullCalendar.io. Fork of https://github.com/maddhatter/laravel-fullcalendar",
-    "authors": [
-        {
-            "name": "Qlick by Nermin Elkasovic",
-            "email": "nermin@qlick.ch",
-            "homepage": "https://qlick.ch",
-            "role": "Developer"
-        }
-    ],
+    "name": "carrollbradford/laravel-full-calendar",
+    "description": "Laravel helper for FullCalendar.io. Fork of https://github.com/nelkasovic/laravel-full-calendar",
     "require": {
         "php": "^7.1",
         "illuminate/database": "^5.0|^6.0|^7.0",
