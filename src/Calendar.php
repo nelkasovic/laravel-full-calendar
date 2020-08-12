@@ -262,7 +262,8 @@ class Calendar
     protected function replaceCallbackPlaceholders($json, $placeholders)
     {
 	    foreach ($placeholders as $name => $placeholder) {
-		    $json = Str::replaceArray($placeholder, [$this->getCallbacks()[$name]], $json);
+		    $search = '"' . $placeholder . '"';
+		    $json = Str::replaceArray($search, [$this->getCallbacks()[$name]], $json);
 	    }
 
         return $json;
