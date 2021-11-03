@@ -2,7 +2,7 @@
     "name": "carrollbradford/laravel-full-calendar",
     "description": "Laravel helper for FullCalendar.io. Fork of https://github.com/nelkasovic/laravel-full-calendar",
     "require": {
-        "php": "^7.1",
+        "php": "^7.1|^8.0",
         "illuminate/database": "^5.0|^6.0|^7.0",
         "illuminate/support": "^5.0|^6.0|^7.0",
         "laravel/helpers": "^1.0"
